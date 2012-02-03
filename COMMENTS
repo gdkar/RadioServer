@@ -1,0 +1,8 @@
+I think the problem with audio buffers at the moment is that we're getting asynchrony between reading threads and consuming threads.
+I'm going to try to re-implement a hella-simple audio card interface where server actually just passes readers to the /input/ audio stream [i.e., pa.open results] rather than passing higher-order reader functions.
+
+output is still --- for the moment --- going to be handled higher order, because we really do have to have more processing on that to modulate interactions between different listeners and assignments to different channels. If a listener decides to listen to more than it's supposed to, that's no problem outisde the server: if a listener decides to broadcast on all the radios forever, that's a /big/ problem.
+
+will probably work on this while in .004 lab if it's a slow day, and then more after I get my work done for the week/when I"m punting-and-not-rappelling.
+
+--gdkar, 11/28/2011, 19:41
