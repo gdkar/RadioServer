@@ -1,9 +1,9 @@
 #include "../../../../../../../usr/include/stdlib.h"
-#include < string.h >
-#include < unistd.h >
-#include < stdio.h >
+#include "../../../../../../../usr/include/string.h"
+#include "../../../../../../../usr/include/unistd.h"
+#include "../../../../../../../usr/include/stdio.h"
 
-#include < jack/jack.h >
+#include "../../../../../../../usr/src/linux-headers-3.0.0-14/include/sound/jack.h"
 
 const double PI = 3.14;
 
